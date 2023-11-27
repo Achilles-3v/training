@@ -1,12 +1,10 @@
 package com.vitalii.listdemo;
 
-import java.util.ArrayList;
 import java.util.LinkedList;
-import java.util.List;
 
 public class ListDemo {
     public static void main(String[] args) {
-        List<Integer> userAgeList = new LinkedList<>();
+        LinkedList<Integer> userAgeList = new LinkedList<>();
         userAgeList.add(40);
         userAgeList.add(53);
         userAgeList.add(45);
@@ -22,5 +20,7 @@ public class ListDemo {
         Integer[] userAgeArray = userAgeList.toArray(new Integer[0]);
         System.out.println(userAgeArray[0]);
         System.out.println(userAgeList);
+
+        System.out.println(userAgeList.poll());
     }
 }
