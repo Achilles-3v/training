@@ -2,17 +2,17 @@ package com.vitalii.genericsdemo;
 
 public class GenericsDemo {
     public static void main(String[] args) {
-        MyGenericsClass g = new MyGenericsClass();
+        MyGenericsClass<Integer> g = new MyGenericsClass();
 
-        g.setMyVar(6);
+        g.setMyVar(10);
         g.printValue();
     }
 }
 
-class MyGenericsClass {
-    private Integer myVar;
+class MyGenericsClass<T> {
+    private T myVar;
 
-    void setMyVar(Integer i) {
+    void setMyVar(T i) {
         myVar = i;
     }
     void printValue() {
