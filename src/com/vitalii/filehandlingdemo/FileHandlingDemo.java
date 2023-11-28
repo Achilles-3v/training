@@ -4,6 +4,15 @@ import java.io.*;
 public class FileHandlingDemo {
     public static void main(String[] args) {
         writeFile();
+
+        File f = new File("src//com//vitalii//filehandlingdemo//myFile.txt");
+        File nf = new File("src//com//vitalii//filehandlingdemo//myNewFile.txt");
+        boolean fileRename = f.renameTo(nf);
+        System.out.println(fileRename);
+
+        boolean fileDelete = f.delete();
+        System.out.println(fileDelete);
+
         readFile();
     }
 
@@ -22,7 +31,7 @@ public class FileHandlingDemo {
     public static void readFile() {
         String line;
         try (BufferedReader reader = new BufferedReader
-                (new FileReader("src//com//vitalii//filehandlingdemo//myFile.txt"))){
+                (new FileReader("src//com//vitalii//filehandlingdemo//myNewFile.txt"))){
             line = reader.readLine();
             while (line != null) {
                 System.out.println(line);
